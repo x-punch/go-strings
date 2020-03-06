@@ -50,3 +50,15 @@ func TestContainString(t *testing.T) {
 		t.Fail()
 	}
 }
+
+func TestContains(t *testing.T) {
+	if !strings.ContainsInArray([]string{"12", "aa", "bb"}, "aa") {
+		t.Fail()
+	}
+	if strings.ContainsInArray([]string{"12", "aa", "334"}, "34") {
+		t.Fail()
+	}
+	if strings.ContainsInArray([]string{}, "34") {
+		t.Fail()
+	}
+}

@@ -75,3 +75,13 @@ func ContainString(source string, sep string, target string) bool {
 	}
 	return false
 }
+
+// ContainsInArray will query string array and check wether target is in array
+func ContainsInArray(source []string, target string) bool {
+	for _, s := range source {
+		if s == target {
+			return true
+		}
+	}
+	return false
+}
