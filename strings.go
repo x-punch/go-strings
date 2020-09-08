@@ -12,6 +12,11 @@ var (
 	Alphabets = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
 )
 
+// init initializes the random number generator
+func init() {
+	rand.Seed(time.Now().UTC().UnixNano())
+}
+
 // GetRandomString will generate a random string with given length
 func GetRandomString(n int) string {
 	var bytes = make([]byte, n)
